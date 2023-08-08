@@ -17,14 +17,17 @@ I've been learning Deep Learning by doing projects like this. In this project, I
 ## Build Deep Learning Model using the Functional API
 * Downloaded VGG16(without the fully connected top layers) to build the model based on it.
 * Built two separate branches on top of the VGG16 model:
+
         
     1. Classification Branch: Detects whether a face is present in the image.
 
     * Applied GlobalMaxPooling2D to reduce spatial dimensions.
     * Added a Dense layer with 2048 nodes and 'relu' activation function.
     * Final output layer is a Dense layer with one node and 'sigmoid' activation function.
+      
 
     2. Bounding Box Branch: Locates the face in the image.
+       
     * Applied another GlobalMaxPooling2D layer to reduce spatial dimensions.
     * Added a Dense layer with 2048 nodes and 'relu' activation function.
     * Final output layer is a Dense layer with four nodes (representing bounding box coordinates) and 'sigmoid' activation function.
@@ -40,3 +43,5 @@ I've been learning Deep Learning by doing projects like this. In this project, I
 * Predictions were made on the test set, evaluating the model's performance on unseen data.
 
 * The model was further tested for real-time face detection using a webcam, demonstrating its capability to work with live video input.
+## Credits
+This project was inspired and guided by a wonderful tutorial by Nicholas Renotte. A big shout out to Nicholas for his clear and insightful instruction. You can check out the tutorial [here](https://www.youtube.com/watch?v=N_W4EYtsa10&list=PLWI2TiIoKO5bNtayy-KilJMYvnQq71_Yh&index=6&t=1s&ab_channel=NicholasRenotte)
